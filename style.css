@@ -3,16 +3,20 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 img{
     width: 100%;
 }
+
 body{
     font-family: 'Bai Jamjuree', sans-serif;
 }
+
 a{
     text-decoration: none;
     color: black;
 }
+
 ul{
     text-transform: uppercase;
 }
@@ -22,13 +26,21 @@ li{
 .logo{
     font-weight: 600;
     letter-spacing: .2rem;
+    animation: flip alternate .5s;
 }
+
+@keyframes flip {
+    0% {
+        transform: translate(-180px);
+    }
+}
+
 .d-flex{
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     width: 100%;
 }
+
 .justify-content-between{
     justify-content: space-between;
 }
@@ -41,8 +53,22 @@ li{
 .nav {
     padding: 1rem 2.5rem;
 }
+@keyframes animate {
+    0% {
+        transform: translate(350px);
+    }
+}
+.top-up {
+    animation: up;
+}
+@keyframes up {
+    0% {
+        transform: rotate(-360deg);
+    }
+}
 .nav-list{
     margin-left: 2rem;
+    animation: animate alternate .5s;
     padding: 10px;
 }
 li.nav-list:hover{
@@ -101,6 +127,15 @@ li.nav-list:hover{
     height: 65vh;
     display: grid;
     place-items: center;
+    animation: moveup alternate 1s;
+}
+@keyframes moveup {
+    0% {
+        transform: translateY(360px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
 }
 .txt h1 {
     font-size: 3rem;
@@ -111,6 +146,7 @@ li.nav-list:hover{
 }
 .align-center {
     text-align: center;
+    align-items: center;
 }
 .p-6 {
     padding: 6rem 0;
@@ -120,6 +156,9 @@ li.nav-list:hover{
     border-radius: 2rem;
     outline: none;
     border: 1px solid black;
+}
+.btn:nth-child(1){
+    padding: .5rem 1rem !important;
 }
 .btn-primary {
     background-color: black;
@@ -202,4 +241,32 @@ li.nav-list:hover{
 }
 .mt-4{
     margin-top: 4rem;
+}
+.b-1{
+    width: 30%;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+.b-1 h1 {
+    margin-bottom: 2rem;
+}
+.b-1 p {
+    border-bottom: 1px solid rgb(31, 28, 28);
+    padding: 6px;
+    font-weight: lighter;
+    cursor: pointer;
+}
+.b-1 p a {
+    transition: all ease-in-out .4s;
+    color: white !important;
+}
+.b-1 p a:hover {
+    margin-left: 1rem;
+}
+.b-1 p:last-child{
+    border-bottom: none;
+}
+.myIcon i{transition: ease-in-out .4s;}
+.myIcon i:hover {
+    transform: scale(1.2, 1.2);
 }
