@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: auto;
 }
 
 img{
@@ -109,14 +110,14 @@ li.nav-list:hover{
 
 /* end here  */
 .bg-color{
-    min-height: 65vh;
+    min-height: 80vh;
     background: url(./images/IMG_0832.jpg);
     background-position: center;
     background-size: cover;
 
 }
 .bg {
-    min-height: 65vh;
+    min-height: 80vh;
     background-image: linear-gradient(120deg, rgba(0,0,0,0.85) 72%, rgba(181,0,48,0) 100%);
     opacity: .7;
 }
@@ -124,7 +125,7 @@ li.nav-list:hover{
     color : white;
     margin: 0 auto;
     width: 85%;
-    height: 65vh;
+    height: 80vh;
     display: grid;
     place-items: center;
     animation: moveup alternate 1s;
@@ -188,7 +189,7 @@ li.nav-list:hover{
     line-height: 1.6;
     letter-spacing: .05rem;
 }
-.w-80{
+.w-60{
     width: 60%;
     margin: 0 auto
 }
@@ -223,7 +224,7 @@ li.nav-list:hover{
     font-weight: 400;
 }
 .rob-1{
-    width: 30%;
+    width: 100%;
 }
 .rob-1 img{
     height: 350px;

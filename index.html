@@ -1,37 +1,46 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html> -->
 <html lang="en">
 <head>
+
+    <!-- refresh page at 30 seconds -->
+    <!-- <meta http-equiv="refresh" content="30" /> -->
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Robot Web</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
     <link rel="stylesheet" href="dist/aos.css">
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;1,300;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/humburger.css">
 </head>
 <body>
 
     <header>
-        <div class="d-flex justify-content-between nav">
+        <div class="d-flex justify-content-between nav align-center" style="position: fixed; z-index: 999; background: white;">
             <div class="logo">
                 SHAMSKHUS</BR>
                 ROBOTICS
             </div>
-            <div class="nav-brand">
-                <ul class="navbar d-flex">
+
+            
+            
+            <div class="nav-brand" id="nav-links">
+                <ul class="navbar d-flex flex-column">
                     <li class="nav-list"><a href="#">About</a>
                         <ul class="nav-content">
-                            <li><a href="Sophia#">Leadership</a></li>
-                            <li><a href="Sophia#">Award</a></li>
-                            <li><a href="Sophia#">Meat the team</a></li>
+                            <li><a href="#">Leadership</a></li>
+                            <li><a href="#">Award</a></li>
+                            <li><a href="#">Meat the team</a></li>
                         </ul>
                     </li>
                     <li class="nav-list"><a href="#">Robots</a>
                         <ul class="nav-content">
-                            <li class="sub-nav-list"><a href="Sophia#">Sophia</a>
+                            <li class="sub-nav-list"><a href="#">Sophia <span style="float: right;">></span> </a>
                                 <ul class="sub-nav-content">
                                     <li><a href="#">Being Sophia</a></li>
                                     <li><a href="#">Art By Sophia The Robot</a></li>
@@ -39,14 +48,19 @@
                                     <li><a href="#">SophiaDao</a></li>
                                 </ul>
                             </li>
-                            <li><a href="Sophia#">Little Sophia</a></li>
-                            <li><a href="Sophia#">All Robots</a></li>
+                            <li><a href="#">Little Sophia</a></li>
+                            <li><a href="#">All Robots</a></li>
                         </ul>
                     </li>
                     <li class="nav-list"><a href="#">Resource</a></li>
                     <li class="nav-list"><a href="#">Contact</a></li>
                 </ul>
             </div>
+            <input type="checkbox" id="menu-toggle" name="checkbox" />
+            <label for="menu-toggle" class="menu-button-container" onclick="myfunc()">
+                <div class="menu-button"></div>
+            </label>
+            
         </div>
     </header>
 
@@ -64,7 +78,7 @@
     </section>
 
     <section>
-        <div class="align-center p-6 w-80" data-aos="zoom-out">
+        <div class="align-center p-6 w-60" data-aos="zoom-out">
             <h2 class="mb-2">Why human-like robots ?</h2>
             <p data-aos="fade-in" class="mb-2 lh-2">Robots will soon be everywhere. How can we nurture them to be our friends and useful collaborators? Robots with good aesthetic design, rich personalities, and social cognitive intelligence can potentially connect deeply and meaningfully with humans.</p>
             <button class="btn btn-primary" data-aos="fade-in">OUR ROBOTS</button>
@@ -73,7 +87,7 @@
 
     <section>
         <div class="bg-black p-6">
-            <div class="d-flex align-center justify-content-around robotics">
+            <div class="d-flex align-center justify-content-around robotics flex-column">
                 <div class="robot-txt" data-aos="fade-in">
                     <h1 class="lh-2">Shamskhus AI</h1>
                     <h4 class="lh-2 mt-1">Developing Meaningful AI Interactions</h4>
@@ -88,7 +102,7 @@
     </section>
 
     <section>
-        <div class="d-flex align-center justify-content-around robotics">
+        <div class="d-flex align-center justify-content-around robotics flex-column">
             
             <div class="robot-img" data-aos="flip-up">
                 <img src="./images/sophia_therobot_hat.jpg" alt="">
@@ -103,88 +117,89 @@
     </section>
 
     <section>
-        <div class="bg-black p-6" data-aos="zoom-in">
-            <h1 class="align-center mb-1">Latest News</h1>
-            <div class="slide-container swiper" data-aos="fade-in">
-                <div class="slide-content">
-                    <div class="card-wrapper swiper-wrapper">
-                        <div class="card swiper-slide">
-                            <div class="image-content">
-                                <span class="overlay"></span>
+        <div class="bg-black" data-aos="zoom-in">
+            <div class="robotics p-6" style="height: 700px;">
+                <h1 class="align-center mb-2">Latest News</h1>
+                <div class="slide-container swiper" data-aos="fade-in">
+                    <div class="slide-content">
+                        <div class="card-wrapper swiper-wrapper" style="margin: 0; padding: 0">
+                            <div class="card swiper-slide" style="height: 400px;">
+                                <div class="image-content" >
+                                    <span class="overlay"></span>
 
-                                <div class="card-image" data-aos="fade-in">
-                                    <img src="images/Jimmy-Fallon.jpg" alt="" class="card-img">
+                                    <div class="card-image rob-1" data-aos="fade-in">
+                                        <img src="images/Jimmy-Fallon.jpg" alt="" class="card-img">
+                                    </div>
+                                </div>
+
+                                <div class="card-content" data-aos="fade-in">
+                                    <h2 class="name">David Dell</h2>
+                                    <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+                                    <button class="btn btn-success">View More</button>
                                 </div>
                             </div>
+                            <div class="card swiper-slide" style="height: 400px;">
+                                <div class="image-content">
+                                    <span class="overlay"></span>
 
-                            <div class="card-content" data-aos="fade-in">
-                                <h2 class="name">David Dell</h2>
-                                <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+                                    <div class="card-image rob-1" data-aos="fade-in">
+                                        <img src="images/David-with-multiple-Sophias-2.png" alt="" class="card-img">
+                                    </div>
+                                </div>
 
-                                <button class="button">View More</button>
-                            </div>
-                        </div>
-                        <div class="card swiper-slide">
-                            <div class="image-content">
-                                <span class="overlay"></span>
+                                <div class="card-content" data-aos="fade-in">
+                                    <h2 class="name">David Dell</h2>
+                                    <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
 
-                                <div class="card-image" data-aos="fade-in">
-                                    <img src="images/David-with-multiple-Sophias-2.png" alt="" class="card-img">
+                                    <button class="btn btn-success">View More</button>
                                 </div>
                             </div>
+                            <div class="card swiper-slide" style="height: 400px;">
+                                <div class="image-content">
+                                    <span class="overlay"></span>
 
-                            <div class="card-content" data-aos="fade-in">
-                                <h2 class="name">David Dell</h2>
-                                <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+                                    <div class="card-image rob-1" data-aos="fade-in">
+                                        <img src="images/20200313-D72_3584.jpg" alt="" class="card-img">
+                                    </div>
+                                </div>
 
-                                <button class="button">View More</button>
-                            </div>
-                        </div>
-                        <div class="card swiper-slide">
-                            <div class="image-content">
-                                <span class="overlay"></span>
+                                <div class="card-content" data-aos="fade-in">
+                                    <h2 class="name">David Dell</h2>
+                                    <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
 
-                                <div class="card-image" data-aos="fade-in">
-                                    <img src="images/20200313-D72_3584.jpg" alt="" class="card-img">
+                                    <button class="btn btn-success">View More</button>
                                 </div>
                             </div>
+                            <div class="card swiper-slide" data-aos="fade-in"  style="height: 400px;">
+                                <div class="image-content">
+                                    <span class="overlay"></span>
 
-                            <div class="card-content" data-aos="fade-in">
-                                <h2 class="name">David Dell</h2>
-                                <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
-
-                                <button class="button">View More</button>
-                            </div>
-                        </div>
-                        <div class="card swiper-slide" data-aos="fade-in">
-                            <div class="image-content">
-                                <span class="overlay"></span>
-
-                                <div class="card-image" data-aos="fade-in">
-                                    <img src="images/1_NOmGdicMgCx6gTfq4XvyEw.jpeg" alt="" class="card-img">
+                                    <div class="card-image rob-1" data-aos="fade-in">
+                                        <img src="images/1_NOmGdicMgCx6gTfq4XvyEw.jpeg" alt="" class="card-img">
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="card-content">
-                                <h2 class="name">David Dell</h2>
-                                <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+                                <div class="card-content" data-aos="fade-in">
+                                    <h2 class="name">David Dell</h2>
+                                    <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
 
-                                <button class="button">View More</button>
+                                    <button class="btn btn-success">View More</button>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="swiper-button-next swiper-navBtn"></div>
+                    <div class="swiper-button-prev swiper-navBtn"></div>
                 </div>
-
-                <div class="swiper-button-next swiper-navBtn"></div>
-                <div class="swiper-button-prev swiper-navBtn"></div>
             </div>
         </div>
     </section>
    
 
     <section>
-        <div class="w-80 p-6" data-aos="fade-in">
-            <div class="w-80" data-aos="fade-in">
+        <div class="w-60 p-6" data-aos="fade-in">
+            <div class="w-60" data-aos="fade-in">
                 <p class="lh-2 mb-1">Join us on his journey of discovery to create empathetic, living, intelligent machines that enrich our lives.</p>
                 <div class="mb-1" data-aos="fade-in">
                     <input type="text" placeholder="Your Email Address" class="email-input">
@@ -207,7 +222,7 @@
     <footer>
         <div class="bg-black p-6" data-aos="fade-in">
             <div class="robotics">
-                <div class="d-flex justify-content-around" data-aos="fade-in">
+                <div class="d-flex justify-content-around flex-column data-aos="fade-in">
                     <div data-aos="fade-in" class="b-1">
                         <h1>Resource</h1>
                         <p>
@@ -262,6 +277,21 @@
         easing: 'ease-in-out-sine'
       });
     </script>
+
+<script>
+    function myfunc(){
+        var x = document.getElementById("nav-links");
+        if(x.style.display === "none"){
+            x.style.display = "block";
+        }
+        else if (x.style.display === "block"){
+            x.style.display="none";
+        }
+        else {
+            x.style.display = "block";
+        }
+    }
+</script>
 
 </body>
 </html>
